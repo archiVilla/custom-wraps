@@ -1,0 +1,38 @@
+name: add-fujur-png
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/add-fujur-png.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download Fujur.png
+        run: |
+          mkdir -p model3/example
+          curl -fsSL -o model3/example/Fujur.png "https://litter.catbox.moe/30qyq8.png"
+          python3 - <<'PY'
+          import pathlib
+          p = pathlib.Path('model3/example/Fujur.png')
+          data = p.read_bytes()
+          assert data.startswith(b'\x89PNG\r\n\x1a\n'), data[:16]
+          assert 100000 < len(data) < 1000000, len(data)
+          print('ok', len(data))
+          PY
+      - name: Commit PNG
+        run: |
+          git config user.name "archiVilla"
+          git config user.email "49572048+archiVilla@users.noreply.github.com"
+          git add model3/example/Fujur.png
+          git diff --cached --quiet && echo 'no change' && exit 0
+          git commit -m "Add Fujur v2 wrap PNG (snout toward front bumper)"
+          git push
