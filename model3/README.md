@@ -8,6 +8,13 @@ Download the template below and customize it with your own design. For complete 
 
 [Download Template](template.png)
 
+## Fujur (custom)
+
+Pearl-white luck dragon wrap for a 2023 Model 3, named after Fújur from *The Neverending Story*.
+
+- Notes: [example/FUJUR.md](example/FUJUR.md)
+- Wrap file to upload in the car: `example/Fujur.png` (add the PNG in this folder; Tesla requires 512–1024 px, PNG, max 1 MB)
+
 ## Examples
 
 <p>
