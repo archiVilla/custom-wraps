@@ -6,5 +6,6 @@ Custom Paint Shop wrap for Tesla Model 3 (pre-Highland / 2023).
 - Theme: Fújur, the luck dragon from Michael Ende's The Neverending Story
 - Palette: mother-of-pearl scales, ruby eyes, gold name on the rear band
 - Hood orientation: snout toward the front bumper (template top of hood panel = car front), eyes looking forward
+- Verified on-car in Tesla app Controls view (2026-08-29): snout at front bumper, eyes toward windshield
 
 Install: Tesla app Creations → Wrap → Upload, or USB folder `Wraps`.
