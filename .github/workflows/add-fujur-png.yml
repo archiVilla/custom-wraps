@@ -19,8 +19,7 @@ jobs:
       - name: Download Fujur.png
         run: |
           mkdir -p model3/example
-          curl -fsSL -o model3/example/Fujur.png "https://litter.catbox.moe/74ddis.png"
-          file model3/example/Fujur.png
+          curl -fsSL -o model3/example/Fujur.png "https://litter.catbox.moe/gkn2qr.png"
           python3 - <<'PY'
           import pathlib
           p = pathlib.Path('model3/example/Fujur.png')
@@ -35,5 +34,5 @@ jobs:
           git config user.email "49572048+archiVilla@users.noreply.github.com"
           git add model3/example/Fujur.png
           git diff --cached --quiet && echo 'no change' && exit 0
-          git commit -m "Add Fujur.png wrap for Model 3 2023"
+          git commit -m "Fix Fujur hood orientation: snout toward front bumper"
           git push
