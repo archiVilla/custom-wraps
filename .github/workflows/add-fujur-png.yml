@@ -19,7 +19,7 @@ jobs:
       - name: Download Fujur.png
         run: |
           mkdir -p model3/example
-          curl -fsSL -o model3/example/Fujur.png "https://litter.catbox.moe/9irda3.png"
+          curl -fsSL -o model3/example/Fujur.png "https://litter.catbox.moe/ehhc6d.png"
           python3 - <<'PY'
           import pathlib
           p = pathlib.Path('model3/example/Fujur.png')
@@ -34,5 +34,5 @@ jobs:
           git config user.email "49572048+archiVilla@users.noreply.github.com"
           git add model3/example/Fujur.png
           git diff --cached --quiet && echo 'no change' && exit 0
-          git commit -m "Flip Fujur hood face 180 so it is upright in Tesla app"
+          git commit -m "Fujur v4: flip hood face so snout points to front bumper"
           git push
